@@ -8,7 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIGestureRecognizerDelegate>{
+    
+    IBOutlet UIView *yellowView;
+    IBOutlet UIView *blueView;
+    IBOutlet UILabel*resultLabel;
+    
+    UIView *blackview;
+    UIView *yellowsmallView;
+    UIView *bluesomallView;
+    
+    int number;
+    int score;
+    IBOutlet UILabel *scorelabel;
+}
+
+-(void)panAction:(UIPanGestureRecognizer *)sender;
+
+-(void)makeyellow;
+-(void)makeblue;
+-(void)random;
+-(void)plusScore;
 
 
 @end
